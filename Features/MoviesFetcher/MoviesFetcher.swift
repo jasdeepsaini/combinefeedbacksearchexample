@@ -37,7 +37,7 @@ class MoviesFetcher {
     func filteredMovies(for searchString: String) -> AnyPublisher<MovieFetcherResult, Never> {
         let randomInt = Int.random(in: 0..<100)
 
-        if randomInt < 10 {
+        if randomInt < 5 {
             let result = MovieFetcherResult.failure(NSError(domain: "", code: 100, userInfo: [NSLocalizedDescriptionKey: "Loading Failed"]))
             return Just(result).eraseToAnyPublisher()
         } else {

@@ -21,31 +21,16 @@ extension Feature.Search {
         case loading
         case loaded
         case noResults
-        case loadingFailed(Error)
-
-        public static func == (lhs: Status, rhs: Status) -> Bool {
-            switch (lhs, rhs) {
-            case(.idle, .idle),
-                (.loading, .loading),
-                (.loaded, .loaded),
-                (.noResults, .noResults),
-                (.loadingFailed, .loadingFailed): // Ignoring the actual error for now
-                return true
-
-            case(.idle, _),
-                (.loading, _),
-                (.loaded, _),
-                (.noResults, _),
-                (.loadingFailed, _): // Ignoring the actual error for now
-                return false
-            }
-        }
+        case loadingFailed
     }
 
     enum Event {
+        // User Initiated Events
         case userEnteredSearch(String)
+
+        // Other Events
         case loadedResults([Movie])
-        case loadingFailed(Error)
+        case loadingFailed
     }
 
     struct State {
@@ -69,13 +54,17 @@ extension Feature.Search {
                     state.results = results
 
                     if results.count == 0 {
-                        state.status = .noResults
+                        if state.searchString.isEmpty {
+                            state.status = .idle
+                        } else {
+                            state.status = .noResults
+                        }
                     } else {
                         state.status = .loaded
                     }
 
-                case .loadingFailed(let error):
-                    state.status = .loadingFailed(error)
+                case .loadingFailed:
+                    state.status = .loadingFailed
                 }
             }
         }
@@ -93,9 +82,9 @@ extension Feature.Search {
         }
 
         private static func whenUserEnteredSearchString() -> Feedback<State, Event> {
-            Feedback.lensing(event: { event -> String? in
-                if case let Event.userEnteredSearch(searchString) = event {
-                    return searchString
+            Feedback.lensing(state: { state -> String? in
+                if state.status == .loading {
+                    return state.searchString
                 }
 
                 return nil
@@ -107,8 +96,8 @@ extension Feature.Search {
                         case .success(let movies):
                             return Event.loadedResults(movies)
 
-                        case .failure(let error):
-                            return Event.loadingFailed(error)
+                        case .failure:
+                            return Event.loadingFailed
                         }
                     }
                     .eraseToAnyPublisher()

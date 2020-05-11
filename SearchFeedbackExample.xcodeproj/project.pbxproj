@@ -34,7 +34,7 @@
 		EA41950F2468C9450078842F /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 		EAB422382469587300B6EAF1 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		EAB4223A24695DB500B6EAF1 /* KeyboardAdaptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardAdaptor.swift; sourceTree = "<group>"; };
-		EAEE8B2B2469662C00B433DB /* Movies.csv */ = {isa = PBXFileReference; lastKnownFileType = file; path = Movies.csv; sourceTree = SOURCE_ROOT; };
+		EAEE8B2B2469662C00B433DB /* Movies.csv */ = {isa = PBXFileReference; lastKnownFileType = text; name = Movies.csv; path = Features/MoviesFetcher/Movies.csv; sourceTree = SOURCE_ROOT; };
 		EAEE8B2D24697A6000B433DB /* MoviesFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesFetcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,10 +92,9 @@
 		EA41950D2468C9210078842F /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				EAEE8B2B2469662C00B433DB /* Movies.csv */,
+				EAEE8B2F2469810C00B433DB /* MoviesFetcher */,
 				EAB422372469585C00B6EAF1 /* SwiftUISupport */,
 				EA41950E2468C92C0078842F /* Search */,
-				EAEE8B2D24697A6000B433DB /* MoviesFetcher.swift */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -112,10 +111,19 @@
 		EAB422372469585C00B6EAF1 /* SwiftUISupport */ = {
 			isa = PBXGroup;
 			children = (
-				EAB422382469587300B6EAF1 /* LoadingView.swift */,
 				EAB4223A24695DB500B6EAF1 /* KeyboardAdaptor.swift */,
+				EAB422382469587300B6EAF1 /* LoadingView.swift */,
 			);
 			path = SwiftUISupport;
+			sourceTree = "<group>";
+		};
+		EAEE8B2F2469810C00B433DB /* MoviesFetcher */ = {
+			isa = PBXGroup;
+			children = (
+				EAEE8B2B2469662C00B433DB /* Movies.csv */,
+				EAEE8B2D24697A6000B433DB /* MoviesFetcher.swift */,
+			);
+			path = MoviesFetcher;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

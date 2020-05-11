@@ -21,7 +21,7 @@ extension Feature.Search {
             VStack {
                 HStack {
                     TextField("Search",
-                              text: context.binding(for: \.searchString, event: Feature.Search.Event.userEnteredSearch)
+                              text: context.binding(for: \.searchString, event: Feature.Search.Event.userEnteredSearchString)
                     )
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()

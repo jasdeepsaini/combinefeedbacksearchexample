@@ -26,7 +26,7 @@ extension Feature.Search {
 
     enum Event {
         // User Initiated Events
-        case userEnteredSearch(String)
+        case userEnteredSearchString(String)
 
         // Other Events
         case loadedResults([Movie])
@@ -41,7 +41,7 @@ extension Feature.Search {
         static func reducer() -> Reducer<State, Event> {
             Reducer { state, event in
                 switch event {
-                case .userEnteredSearch(let searchString):
+                case .userEnteredSearchString(let searchString):
                     state.searchString = searchString
 
                     if searchString.count == 0 {
@@ -75,13 +75,13 @@ extension Feature.Search {
             super.init(
                 initial: State(),
                 feedbacks: [
-                    SearchViewModel.whenUserEnteredSearchString()
+                    SearchViewModel.whenUserEntersSearchString()
                 ],
                 reducer: State.reducer()
             )
         }
 
-        private static func whenUserEnteredSearchString() -> Feedback<State, Event> {
+        private static func whenUserEntersSearchString() -> Feedback<State, Event> {
             Feedback.lensing(state: { state -> String? in
                 if state.status == .loading {
                     return state.searchString

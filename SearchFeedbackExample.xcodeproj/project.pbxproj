@@ -3,27 +3,39 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		EA4194F32468C2B00078842F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4194F22468C2B00078842F /* AppDelegate.swift */; };
 		EA4194F52468C2B00078842F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4194F42468C2B00078842F /* SceneDelegate.swift */; };
-		EA4194F72468C2B00078842F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4194F62468C2B00078842F /* ContentView.swift */; };
 		EA4194F92468C2B10078842F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA4194F82468C2B10078842F /* Assets.xcassets */; };
 		EA4194FC2468C2B10078842F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA4194FB2468C2B10078842F /* Preview Assets.xcassets */; };
 		EA4194FF2468C2B10078842F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA4194FD2468C2B10078842F /* LaunchScreen.storyboard */; };
+		EA4195072468C2EB0078842F /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4195062468C2EB0078842F /* ViewModel.swift */; };
+		EA41950A2468C4D70078842F /* CombineFeedback in Frameworks */ = {isa = PBXBuildFile; productRef = EA4195092468C4D70078842F /* CombineFeedback */; };
+		EA41950C2468C4D70078842F /* CombineFeedbackUI in Frameworks */ = {isa = PBXBuildFile; productRef = EA41950B2468C4D70078842F /* CombineFeedbackUI */; };
+		EA4195102468C9450078842F /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA41950F2468C9450078842F /* Content.swift */; };
+		EAB422392469587300B6EAF1 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB422382469587300B6EAF1 /* LoadingView.swift */; };
+		EAB4223B24695DB500B6EAF1 /* KeyboardAdaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB4223A24695DB500B6EAF1 /* KeyboardAdaptor.swift */; };
+		EAEE8B2C2469662C00B433DB /* Movies.csv in Resources */ = {isa = PBXBuildFile; fileRef = EAEE8B2B2469662C00B433DB /* Movies.csv */; };
+		EAEE8B2E24697A6000B433DB /* MoviesFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEE8B2D24697A6000B433DB /* MoviesFetcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EA4194EF2468C2B00078842F /* SearchFeedbackExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchFeedbackExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA4194F22468C2B00078842F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA4194F42468C2B00078842F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EA4194F62468C2B00078842F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EA4194F82468C2B10078842F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA4194FB2468C2B10078842F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EA4194FE2468C2B10078842F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA4195002468C2B10078842F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA4195062468C2EB0078842F /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		EA41950F2468C9450078842F /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
+		EAB422382469587300B6EAF1 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		EAB4223A24695DB500B6EAF1 /* KeyboardAdaptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardAdaptor.swift; sourceTree = "<group>"; };
+		EAEE8B2B2469662C00B433DB /* Movies.csv */ = {isa = PBXFileReference; lastKnownFileType = file; path = Movies.csv; sourceTree = SOURCE_ROOT; };
+		EAEE8B2D24697A6000B433DB /* MoviesFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesFetcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +43,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA41950A2468C4D70078842F /* CombineFeedback in Frameworks */,
+				EA41950C2468C4D70078842F /* CombineFeedbackUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +54,7 @@
 		EA4194E62468C2B00078842F = {
 			isa = PBXGroup;
 			children = (
+				EA41950D2468C9210078842F /* Features */,
 				EA4194F12468C2B00078842F /* SearchFeedbackExample */,
 				EA4194F02468C2B00078842F /* Products */,
 			);
@@ -58,7 +73,6 @@
 			children = (
 				EA4194F22468C2B00078842F /* AppDelegate.swift */,
 				EA4194F42468C2B00078842F /* SceneDelegate.swift */,
-				EA4194F62468C2B00078842F /* ContentView.swift */,
 				EA4194F82468C2B10078842F /* Assets.xcassets */,
 				EA4194FD2468C2B10078842F /* LaunchScreen.storyboard */,
 				EA4195002468C2B10078842F /* Info.plist */,
@@ -73,6 +87,35 @@
 				EA4194FB2468C2B10078842F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EA41950D2468C9210078842F /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				EAEE8B2B2469662C00B433DB /* Movies.csv */,
+				EAB422372469585C00B6EAF1 /* SwiftUISupport */,
+				EA41950E2468C92C0078842F /* Search */,
+				EAEE8B2D24697A6000B433DB /* MoviesFetcher.swift */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		EA41950E2468C92C0078842F /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				EA4195062468C2EB0078842F /* ViewModel.swift */,
+				EA41950F2468C9450078842F /* Content.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		EAB422372469585C00B6EAF1 /* SwiftUISupport */ = {
+			isa = PBXGroup;
+			children = (
+				EAB422382469587300B6EAF1 /* LoadingView.swift */,
+				EAB4223A24695DB500B6EAF1 /* KeyboardAdaptor.swift */,
+			);
+			path = SwiftUISupport;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -91,6 +134,10 @@
 			dependencies = (
 			);
 			name = SearchFeedbackExample;
+			packageProductDependencies = (
+				EA4195092468C4D70078842F /* CombineFeedback */,
+				EA41950B2468C4D70078842F /* CombineFeedbackUI */,
+			);
 			productName = SearchFeedbackExample;
 			productReference = EA4194EF2468C2B00078842F /* SearchFeedbackExample.app */;
 			productType = "com.apple.product-type.application";
@@ -119,6 +166,9 @@
 				Base,
 			);
 			mainGroup = EA4194E62468C2B00078842F;
+			packageReferences = (
+				EA4195082468C4D70078842F /* XCRemoteSwiftPackageReference "CombineFeedback" */,
+			);
 			productRefGroup = EA4194F02468C2B00078842F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -136,6 +186,7 @@
 				EA4194FF2468C2B10078842F /* LaunchScreen.storyboard in Resources */,
 				EA4194FC2468C2B10078842F /* Preview Assets.xcassets in Resources */,
 				EA4194F92468C2B10078842F /* Assets.xcassets in Resources */,
+				EAEE8B2C2469662C00B433DB /* Movies.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,7 +199,11 @@
 			files = (
 				EA4194F32468C2B00078842F /* AppDelegate.swift in Sources */,
 				EA4194F52468C2B00078842F /* SceneDelegate.swift in Sources */,
-				EA4194F72468C2B00078842F /* ContentView.swift in Sources */,
+				EA4195102468C9450078842F /* Content.swift in Sources */,
+				EAB422392469587300B6EAF1 /* LoadingView.swift in Sources */,
+				EA4195072468C2EB0078842F /* ViewModel.swift in Sources */,
+				EAB4223B24695DB500B6EAF1 /* KeyboardAdaptor.swift in Sources */,
+				EAEE8B2E24697A6000B433DB /* MoviesFetcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +344,7 @@
 				DEVELOPMENT_TEAM = 439U69A5UK;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SearchFeedbackExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -309,6 +365,7 @@
 				DEVELOPMENT_TEAM = 439U69A5UK;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SearchFeedbackExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -342,6 +399,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EA4195082468C4D70078842F /* XCRemoteSwiftPackageReference "CombineFeedback" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sergdort/CombineFeedback";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EA4195092468C4D70078842F /* CombineFeedback */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EA4195082468C4D70078842F /* XCRemoteSwiftPackageReference "CombineFeedback" */;
+			productName = CombineFeedback;
+		};
+		EA41950B2468C4D70078842F /* CombineFeedbackUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EA4195082468C4D70078842F /* XCRemoteSwiftPackageReference "CombineFeedback" */;
+			productName = CombineFeedbackUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EA4194E72468C2B00078842F /* Project object */;
 }
